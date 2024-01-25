@@ -1,17 +1,15 @@
 <template>
-    <header>
-        <HomeNavbar />
-    </header>
+    <div>
+        
+    </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: "Home"
+    name: "Slogan"
 }
 </script>
 
 <style scoped>
-h1 {
-    color: aqua;
-}
+
 </style>

@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   alias: {
     "@" : resolve( __dirname, '/'),
   },

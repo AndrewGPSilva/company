@@ -18,7 +18,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: aquamarine;
+        background-color: #0094FF;
         padding: 25px;
     }
 

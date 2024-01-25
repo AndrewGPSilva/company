@@ -2,6 +2,9 @@
     <header>
         <HomeNavbar />
     </header>
+    <main>
+        <HomeSlogan />
+    </main>
 </template>
 
 <script lang="ts">

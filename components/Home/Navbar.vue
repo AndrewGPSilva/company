@@ -9,7 +9,7 @@
         <div class="menuAtivo" :class="{ 'ativo': ativarMenu }">
             <button @click="menuAtivado" class="btnMenu">
                 <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
-                    alt="Ícone de um X para fechar o menu">
+                    alt="Ícone de um X para fechar o menu" />
             </button>
             <ul>
                 <li>Inicio</li>
@@ -72,7 +72,7 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 99;
     background-color: rgb(88, 88, 88);
 }
 

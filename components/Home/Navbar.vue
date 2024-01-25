@@ -1,37 +1,82 @@
 <template>
-    <div class="container">
-        <img class="logo" src="~/assets/img/Home/logo.jpg" alt="Logo do Site">
-        <img class="menu" src="~/assets/img/Home/menu.png" alt="PNG de um ícone de um menu hamburguer">
-    </div>
+    <nav>
+        <div class="container">
+            <img class="logo" src="~/assets/img/Home/logo.png" alt="Logo do Site">
+            <button @click="menuAtivado">
+                <img v-if="!ativarMenu" class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
+                <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
+                    alt="Ícone de um X para fechar o menu">
+            </button>
+        </div>
+        <div class="menuAtivo" :class="{ 'ativo': ativarMenu }">
+            <button @click="menuAtivado">
+                <img v-if="!ativarMenu" class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
+                <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
+                    alt="Ícone de um X para fechar o menu">
+            </button>
+            <ul>
+                <li><a href="#">Página 1</a></li>
+                <li><a href="#">Página 2</a></li>
+                <li><a href="#">Página 3</a></li>
+            </ul>
+        </div>
+    </nav>
 </template>
-
+  
 <script lang="ts">
-
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    data() {
+        return {
+            ativarMenu: false
+        };
+    },
+    methods: {
+        menuAtivado() {
+            this.ativarMenu = !this.ativarMenu;
+        }
+    }
+};
+</script>
+  
+<style scoped>
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0094FF;
+    padding: 25px;
 }
 
-</script>
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-<style scoped>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #0094FF;
-        padding: 25px;
-    }
+.menu {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 
-    .logo {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
+.menuAtivo {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    height: 100vh;
+    text-align: right;
+    justify-content: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: red;
+}
 
-    .menu {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-    }
+.menuAtivo.ativo {
+    display: flex;
+}
 </style>
+  

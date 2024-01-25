@@ -1,6 +1,9 @@
 <template>
     <div class="container">
-        <p>Seu Site <br> Sua Marca <br> Sua idéia <br> Nossos códigos! </p>
+        <img src="~/assets/img/Home/persona.png" alt="Personagem masculino usando o computador">
+        <h1>
+            Seu site, <br> Sua marca
+        </h1>
     </div>
 </template>
 
@@ -12,20 +15,18 @@ export default {
 
 <style scoped>
     .container {
-        background-image: url("~/assets/img/Home/fundohome.png");
-        background-position: top;
-        background-size: cover;
-        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
         background-color: #0094FF;
         border-bottom-left-radius: 60px;
         border-bottom-right-radius: 60px;
         margin-top: -5px;
     }
 
-    p {
-        font-size: 32px;
-        font-weight: bold;
-        font-family: 'Courier New', Courier, monospace;
-        margin-bottom: 10px;
+    .container img {
+        width: 200px;
+        height: 200px;
     }
 </style>

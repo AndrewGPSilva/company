@@ -4,3 +4,16 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}

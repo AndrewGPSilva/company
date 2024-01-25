@@ -2,22 +2,21 @@
     <nav>
         <div class="container">
             <img class="logo" src="~/assets/img/Home/logo.png" alt="Logo do Site">
-            <button @click="menuAtivado">
-                <img v-if="!ativarMenu" class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
-                <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
-                    alt="Ícone de um X para fechar o menu">
+            <button v-if="!ativarMenu" @click="menuAtivado">
+                <img class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
             </button>
         </div>
         <div class="menuAtivo" :class="{ 'ativo': ativarMenu }">
-            <button @click="menuAtivado">
-                <img v-if="!ativarMenu" class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
+            <button @click="menuAtivado" class="btnMenu">
                 <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
                     alt="Ícone de um X para fechar o menu">
             </button>
             <ul>
-                <li><a href="#">Página 1</a></li>
-                <li><a href="#">Página 2</a></li>
-                <li><a href="#">Página 3</a></li>
+                <li>Inicio</li>
+                <li>Projetos</li>
+                <li>Orçamentos</li>
+                <li>Sobre</li>
+                <li>FAQ</li>
             </ul>
         </div>
     </nav>
@@ -64,19 +63,36 @@ export default {
 .menuAtivo {
     display: none;
     flex-direction: column;
-    padding: 10px;
-    height: 100vh;
+    padding: 15px;
+    height: 45vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     text-align: right;
     justify-content: right;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: white;
-    color: red;
+    z-index: 10;
+    background-color: rgb(88, 88, 88);
+}
+
+.menuAtivo ul img {
+    width: 30px;
+    height: 30px;
+}
+
+.btnMenu {
+    margin-top: 20px;
+}
+
+ul {
+    margin-top: 40px;
 }
 
 .menuAtivo.ativo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 </style>
   

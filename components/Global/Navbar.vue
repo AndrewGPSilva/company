@@ -37,7 +37,7 @@ export default {
     name: "Navbar",
     data() {
         return {
-            ativarMenu: false
+            ativarMenu: false as boolean
         };
     },
     methods: {

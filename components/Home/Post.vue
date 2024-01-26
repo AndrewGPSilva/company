@@ -2,7 +2,7 @@
     <section class="container" v-if="lado === 'right'">
         <div class="containerTexto">
             <p>
-                {{frase}}
+                {{ frase }}
             </p>
         </div>
         <div>
@@ -15,7 +15,7 @@
         </div>
         <div class="containerTexto">
             <p>
-                {{frase}}
+                {{ frase }}
             </p>
         </div>
     </section>
@@ -25,16 +25,27 @@
 export default {
     name: "Post",
     props: {
-        src: String,
-        alt: String,
-        frase: String,
-        lado: String
+        src: {
+            type: String as () => string,
+            required: true,
+        },
+        alt: {
+            type: String as () => string,
+            required: true,
+        },
+        frase: {
+            type: String as () => string,
+            required: true,
+        },
+        lado: {
+            type: String as () => "right" | "left",
+            required: true,
+        }
     }
 }
 </script>
 
 <style scoped>
-
 .container {
     display: flex;
     justify-content: center;

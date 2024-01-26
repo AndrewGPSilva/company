@@ -12,11 +12,21 @@
                     alt="Ícone de um X para fechar o menu" />
             </button>
             <ul>
-                <li>Inicio</li>
-                <li>Projetos</li>
-                <li>Orçamentos</li>
-                <li>Sobre</li>
-                <li>FAQ</li>
+                <li>
+                    <NuxtLink to="/">Inicio</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="/projetos">Projetos</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="/orcamentos">Orçamentos</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="/sobre">Sobre</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="/faq">FAQ</NuxtLink>
+                </li>
             </ul>
         </div>
     </nav>
@@ -61,7 +71,7 @@ export default {
 }
 
 .menuAtivo {
-    display: none;
+    right: -300px;
     flex-direction: column;
     padding: 15px;
     height: 45vh;
@@ -71,9 +81,9 @@ export default {
     justify-content: right;
     position: absolute;
     top: 0;
-    right: 0;
     z-index: 99;
     background-color: rgb(88, 88, 88);
+    transition: right 0.5s ease;
 }
 
 .menuAtivo ul img {
@@ -93,6 +103,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    right: 0;
 }
 </style>
   

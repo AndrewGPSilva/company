@@ -104,5 +104,9 @@ ul {
     align-items: center;
     right: 0;
 }
+
+a {
+    color: white;
+}
 </style>
   

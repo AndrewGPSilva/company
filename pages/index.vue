@@ -2,9 +2,6 @@
     <Head>
         <Title>GPS.ev - {{ name }}</Title>
     </Head>
-    <header>
-        <HomeNavbar />
-    </header>
     <main>
         <HomeSlogan />
     </main>

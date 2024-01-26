@@ -60,7 +60,7 @@ export default {
 h1 {
     font-family: 'Germania One', system-ui;
     font-size: 33px;
-    color: rgb(173, 69, 0);
+    color: rgb(0, 0, 0);
 }
 
 .menu {
@@ -74,7 +74,7 @@ h1 {
     right: -300px;
     flex-direction: column;
     padding: 15px;
-    height: 45vh;
+    height: 250px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     text-align: right;

@@ -6,7 +6,7 @@
     </div>
     <div class="container-contato">
         <button>
-            Contate-nos
+            <a href="https://api.whatsapp.com/send?phone=5511978862185&text=Olá, vim pelo seu projeto music player." target="_blank">Contate-nos</a>
         </button>
     </div>
 </template>
@@ -38,14 +38,18 @@ export default {
 }
 
 button {
-    background-color: #0028FA;
+    background-color: rgb(26, 26, 26);
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 45px;
     padding-right: 45px;
-    font-size: 30px;
-    color: white;
-    font-family: 'Fugaz One', sans-serif;
     border-radius: 50px;
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Fugaz One', sans-serif;
+    color: white;
+    font-size: 30px;
 }
 </style>

@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>GPS.ev - {{ name }}</Title>
+    </Head>
     <header>
         <HomeNavbar />
     </header>
@@ -9,6 +12,11 @@
 
 <script lang="ts">
 export default {
-    name: "Home"
+    name: "Home",
+    data() {
+        return {
+            name: "Inicio"
+        }
+    }
 }
 </script>

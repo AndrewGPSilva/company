@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="container">
-            <img class="logo" src="~/assets/img/Home/logo.png" alt="Logo do Site">
+            <h1>GPS.ev</h1>
             <button v-if="!ativarMenu" @click="menuAtivado">
                 <img class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
             </button>
@@ -53,15 +53,14 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0094FF;
+    background-color: white;
     padding: 25px;
 }
 
-.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    cursor: pointer;
+h1 {
+    font-family: 'Germania One', system-ui;
+    font-size: 33px;
+    color: rgb(173, 69, 0);
 }
 
 .menu {

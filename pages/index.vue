@@ -12,6 +12,7 @@
         frase="Construímos a ponte entre sua visão e a web, criando sites que impressionam."
         src="https://i.ibb.co/bHhV9zC/postDois.webp" alt="Imagem do Segundo Post" lado="left"
         />
+        <HomeBtnContact />
     </main>
 </template>
 

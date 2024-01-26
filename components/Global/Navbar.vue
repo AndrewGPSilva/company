@@ -70,6 +70,7 @@ h1 {
 }
 
 .menuAtivo {
+    display: none;
     right: -300px;
     flex-direction: column;
     padding: 15px;
@@ -81,7 +82,7 @@ h1 {
     position: absolute;
     top: 0;
     z-index: 99;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(31, 31, 31);
     transition: right 0.5s ease;
 }
 
@@ -101,6 +102,7 @@ ul {
 .menuAtivo.ativo {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     right: 0;
 }

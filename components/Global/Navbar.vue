@@ -1,14 +1,14 @@
 <template>
     <nav>
         <div class="container">
-            <h1>GPS.ev</h1>
+            <NuxtLink to="/"><h1>GPS.ev</h1></NuxtLink>
             <button v-if="!ativarMenu" @click="menuAtivado">
                 <img class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
             </button>
         </div>
         <div class="menuAtivo" :class="{ 'ativo': ativarMenu }">
             <button @click="menuAtivado" class="btnMenu">
-                <img v-if="ativarMenu" class="menu" src="~/assets/img/Home/closedMenu.png"
+                <img v-if="ativarMenu" class="menuFechar" src="~/assets/img/Home/closedMenu.png"
                     alt="Ícone de um X para fechar o menu" />
             </button>
             <ul>
@@ -63,10 +63,20 @@ h1 {
     color: rgb(0, 0, 0);
 }
 
-.menu {
+.menu, .menuFechar {
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+.menuFechar:hover {
+    background-color: rgb(46, 40, 40);
+    border-radius: 10px;
+}
+
+.menu:hover {
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
 }
 
 .menuAtivo {
@@ -109,6 +119,12 @@ ul {
 
 a {
     color: white;
+}
+
+a:hover {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
 }
 </style>
   

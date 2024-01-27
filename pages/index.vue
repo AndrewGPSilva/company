@@ -12,7 +12,6 @@
         frase="Construímos a ponte entre sua visão e a web, criando sites que impressionam."
         src="https://i.ibb.co/bHhV9zC/postDois.webp" alt="Imagem do Segundo Post" lado="left"
         />
-        <HomeBtnContact />
         <HomeFrase
             frase="'Construindo o futuro da
             web, hoje. Tecnologia de 
@@ -40,6 +39,7 @@
             altIconTres="Icone da logo do banco de dados MySQL"
             lado="right"
         />
+        <HomeBtnContact />
     </main>
 </template>
 

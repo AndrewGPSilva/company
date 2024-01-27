@@ -114,7 +114,7 @@ export default {
 }
 
 .imagemTechDireita img {
-    margin-left: 10px;
+    margin-right: 10px;
     width: 55px;
     height: 55px;
 } 

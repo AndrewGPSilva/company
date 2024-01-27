@@ -1,11 +1,6 @@
 <template>
     <div class="container">
-        <p>
-            "Construindo o futuro da <br>
-            web, hoje. Tecnologia de <br>
-            ponta, sites de excelência."
-        </p>
-        <div class="containerImagens">
+        <div class="containerImagens" v-if="lado === 'left'">
             <div class="imagemPost">
                 <img :src="srcImagem" :alt="altImagem" />
             </div>
@@ -13,6 +8,16 @@
                 <img :src="srcIconUm" :alt="altIconUm" />
                 <img :src="srcIconDois" :alt="altIconDois" />
                 <img :src="srcIconTres" :alt="altIconTres" />
+            </div>
+        </div>
+        <div class="containerImagensDireita" v-if="lado === 'right'">
+            <div class="imagemTechDireita">
+                <img :src="srcIconUm" :alt="altIconUm" />
+                <img :src="srcIconDois" :alt="altIconDois" />
+                <img :src="srcIconTres" :alt="altIconTres" />
+            </div>
+            <div class="imagemPost">
+                <img :src="srcImagem" :alt="altImagem" />
             </div>
         </div>
     </div>
@@ -53,6 +58,10 @@ export default {
         altIconTres: {
             type: String as () => string,
             required: true
+        },
+        lado: {
+            type: String as () => string,
+            required: true
         }
     }
 }
@@ -66,16 +75,10 @@ export default {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 20px;
     padding-top: 5px;
 }
 
-p {
-    color: #545454;
-    font-family: 'Roboto Mono', monospace;
-}
-
-.containerImagens {
+.containerImagens, .containerImagensDireita {
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -93,7 +96,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid black;
+    border-left: 2px solid black;
 }
 
 .imagemTech img {
@@ -101,4 +104,18 @@ p {
     width: 55px;
     height: 55px;
 }
+
+.imagemTechDireita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+}
+
+.imagemTechDireita img {
+    margin-left: 10px;
+    width: 55px;
+    height: 55px;
+} 
 </style>

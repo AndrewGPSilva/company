@@ -13,9 +13,7 @@
         src="https://i.ibb.co/bHhV9zC/postDois.webp" alt="Imagem do Segundo Post" lado="left"
         />
         <HomeFrase
-            frase="'Construindo o futuro da
-            web, hoje. Tecnologia de 
-            ponta, sites de excelência.'"
+            frase="'Construindo o futuro da web, hoje. Tecnologia de ponta, sites de excelência.'"
         />
         <HomeProjects 
             srcImagem="https://m.media-amazon.com/images/I/B13h1EXqDiS.jpg" 
@@ -27,6 +25,7 @@
             srcIconTres="https://i.ibb.co/bFXpr1R/css.png"
             altIconTres="Icone da logo do CSS"
             lado="left"
+            href="https://www.netflix.com"
         />
         <HomeProjects 
             srcImagem="https://www.vaipradisney.com/blog/wp-content/uploads/2019/11/disney-plus-11.png" 
@@ -38,6 +37,7 @@
             srcIconTres="https://i.ibb.co/wyzL97g/mysql.png"
             altIconTres="Icone da logo do banco de dados MySQL"
             lado="right"
+            href="https://www.disneyplus.com/"
         />
         <HomeBtnContact />
     </main>

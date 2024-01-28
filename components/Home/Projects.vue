@@ -2,7 +2,7 @@
     <div class="container">
         <div class="containerImagens" v-if="lado === 'left'">
             <div class="imagemPost">
-                <img :src="srcImagem" :alt="altImagem" />
+                <a :href="href" target="_blank"><img :src="srcImagem" :alt="altImagem" /></a>
             </div>
             <div class="imagemTech">
                 <img :src="srcIconUm" :alt="altIconUm" />
@@ -17,7 +17,7 @@
                 <img :src="srcIconTres" :alt="altIconTres" />
             </div>
             <div class="imagemPost">
-                <img :src="srcImagem" :alt="altImagem" />
+                <a :href="href" target="_blank"><img :src="srcImagem" :alt="altImagem" /></a>
             </div>
         </div>
     </div>
@@ -62,6 +62,10 @@ export default {
         lado: {
             type: String as () => string,
             required: true
+        },
+        href: {
+            type: String as () => string,
+            required: true
         }
     }
 }
@@ -76,6 +80,10 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px;
+}
+
+img {
+    cursor: pointer;
 }
 
 .containerImagens, .containerImagensDireita {

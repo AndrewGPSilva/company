@@ -86,7 +86,8 @@ img {
     cursor: pointer;
 }
 
-.containerImagens, .containerImagensDireita {
+.containerImagens,
+.containerImagensDireita {
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -125,5 +126,5 @@ img {
     margin-right: 10px;
     width: 55px;
     height: 55px;
-} 
+}
 </style>

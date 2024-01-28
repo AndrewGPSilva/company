@@ -15,7 +15,7 @@ export default {
 .container-contato {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 a {

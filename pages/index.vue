@@ -16,8 +16,8 @@
             frase="'Construindo o futuro da web, hoje. Tecnologia de ponta, sites de excelência.'"
         />
         <HomeProjects 
-            srcImagem="https://m.media-amazon.com/images/I/B13h1EXqDiS.jpg" 
-            altImagem="Imagem da tela inicial da Netflix" 
+            srcImagem="https://i.ibb.co/gynCSNF/index.png" 
+            altImagem="Imagem da tela inicial do projeto Geek OP" 
             srcIconUm="https://i.ibb.co/f27wdz5/spring.png"
             altIconUm="Icone da logo do framework Spring" 
             srcIconDois="https://i.ibb.co/WnqxL8d/html.png"
@@ -25,11 +25,11 @@
             srcIconTres="https://i.ibb.co/bFXpr1R/css.png"
             altIconTres="Icone da logo do CSS"
             lado="left"
-            href="https://www.netflix.com"
+            href="https://vimeo.com/897747118"
         />
         <HomeProjects 
-            srcImagem="https://www.vaipradisney.com/blog/wp-content/uploads/2019/11/disney-plus-11.png" 
-            altImagem="Imagem da tela inicial da Disney" 
+            srcImagem="https://i.ibb.co/MGg05dJ/plat.png" 
+            altImagem="Imagem da tela inicial da plataforma EAD" 
             srcIconUm="https://i.ibb.co/HXq4tBM/vue.png"
             altIconUm="Icone da logo do framework Vue Js" 
             srcIconDois="https://i.ibb.co/drrxzN9/laravel.png"
@@ -37,7 +37,7 @@
             srcIconTres="https://i.ibb.co/wyzL97g/mysql.png"
             altIconTres="Icone da logo do banco de dados MySQL"
             lado="right"
-            href="https://www.disneyplus.com/"
+            href="https://vimeo.com/manage/videos/897806834"
         />
         <HomeBtnContact />
     </main>

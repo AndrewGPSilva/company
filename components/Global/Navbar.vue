@@ -1,34 +1,38 @@
 <template>
     <nav>
         <div class="container">
-            <NuxtLink to="/"><h1>GPS.ev</h1></NuxtLink>
+            <NuxtLink to="/">
+                <h1>GPS.ev</h1>
+            </NuxtLink>
             <button v-if="!ativarMenu" @click="menuAtivado">
                 <img class="menu" src="~/assets/img/Home/menu.png" alt="Ícone de um menu hamburguer">
             </button>
         </div>
-        <div class="menuAtivo" :class="{ 'ativo': ativarMenu }">
-            <button @click="menuAtivado" class="btnMenu">
-                <img v-if="ativarMenu" class="menuFechar" src="~/assets/img/Home/closedMenu.png"
-                    alt="Ícone de um X para fechar o menu" />
-            </button>
-            <ul>
-                <li>
-                    <NuxtLink to="/">Inicio</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/projetos">Projetos</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/orcamentos">Orçamentos</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/sobre">Sobre</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/faq">FAQ</NuxtLink>
-                </li>
-            </ul>
-        </div>
+        <TransitionGroup name="aparicao">
+            <div v-if="show" class="menuAtivo" :class="{ 'ativo': ativarMenu }">
+                <button @click="menuAtivado" class="btnMenu">
+                    <img v-if="ativarMenu" class="menuFechar" src="~/assets/img/Home/closedMenu.png"
+                        alt="Ícone de um X para fechar o menu" />
+                </button>
+                <ul>
+                    <li>
+                        <NuxtLink to="/">Inicio</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/projetos">Projetos</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/orcamentos">Orçamentos</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/sobre">Sobre</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/faq">FAQ</NuxtLink>
+                    </li>
+                </ul>
+            </div>
+        </TransitionGroup>
     </nav>
 </template>
   
@@ -37,12 +41,14 @@ export default {
     name: "Navbar",
     data() {
         return {
-            ativarMenu: false as boolean
+            ativarMenu: false as boolean,
+            show: false as boolean
         };
     },
     methods: {
         menuAtivado() {
-            this.ativarMenu = !this.ativarMenu;
+            this.ativarMenu = !this.ativarMenu
+            this.show = !this.show
         }
     }
 };
@@ -63,7 +69,8 @@ h1 {
     color: rgb(0, 0, 0);
 }
 
-.menu, .menuFechar {
+.menu,
+.menuFechar {
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -125,6 +132,20 @@ a:hover {
     color: green;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.aparicao-enter-active {
+  transition: all 1s ease-out;
+}
+
+.aparicao-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.aparicao-enter-from,
+.aparicao-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>
   

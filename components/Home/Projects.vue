@@ -127,4 +127,13 @@ img {
     width: 55px;
     height: 55px;
 }
+
+.imagemPost img:hover {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.imagemTechDireita img:hover,
+.imagemTech img:hover {
+    border-bottom: 1px solid black;
+}
 </style>

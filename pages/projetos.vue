@@ -1,6 +1,6 @@
 <template>
     <Head>
-        <Title>GPS.ev - {{ name }}</Title>
+        <Title>GPF.ev - {{ name }}</Title>
     </Head>
     <main>
 

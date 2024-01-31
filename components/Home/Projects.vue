@@ -129,11 +129,11 @@ img {
 }
 
 .imagemPost img:hover {
-    border: 2px solid rgb(0, 0, 0);
+    border: 4px solid rgb(0, 161, 27);
 }
 
 .imagemTechDireita img:hover,
 .imagemTech img:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid rgb(0, 95, 16);
 }
 </style>

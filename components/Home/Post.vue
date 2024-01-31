@@ -1,23 +1,27 @@
 <template>
     <section class="container" v-if="lado === 'right'">
-        <div class="containerTexto">
-            <p>
-                {{ frase }}
-            </p>
-        </div>
-        <div>
-            <img :src="src" :alt="alt" />
-        </div>
+        <TransitionGroup name="aparicao">
+            <div v-if="show" class="containerTexto">
+                <p>
+                    {{ frase }}
+                </p>
+            </div>
+            <div v-if="show">
+                <img :src="src" :alt="alt" />
+            </div>
+        </TransitionGroup>
     </section>
     <section class="container" v-if="lado === 'left'">
-        <div>
-            <img :src="src" :alt="alt" />
-        </div>
-        <div class="containerTexto">
-            <p>
-                {{ frase }}
-            </p>
-        </div>
+        <TransitionGroup name="aparicao">
+            <div v-if="show">
+                <img :src="src" :alt="alt" />
+            </div>
+            <div v-if="show" class="containerTexto">
+                <p>
+                    {{ frase }}
+                </p>
+            </div>
+        </TransitionGroup>
     </section>
 </template>
 
@@ -41,6 +45,19 @@ export default {
             type: String as () => "right" | "left",
             required: true,
         }
+    },
+    data() {
+        return {
+            show: false as boolean
+        }
+    },
+    methods:{
+        animacao() {
+            this.show = !this.show;
+        }
+    },
+    mounted(){
+        this.animacao()
     }
 }
 </script>
@@ -65,5 +82,19 @@ img {
     width: 150px;
     height: 130px;
     border-radius: 20px;
+}
+
+.aparicao-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.aparicao-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.aparicao-enter-from,
+.aparicao-leave-to {
+  transform: translateX(-20px);
+  opacity: 0;
 }
 </style>
